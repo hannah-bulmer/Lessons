@@ -126,18 +126,31 @@ Create another page called About, and add the route to routes.rb and add the cor
 Since our static pages currently have different titles (i.e. Home, Help, About) we want this to display on our HTML pages. Use Ruby to tell the HTML page which title to use on which page.
 
 We do this by providing a title on a given page:
+
+**app/views/static_pages/home.html.erb**
 ```html.erb
-# app/views/static_pages/home.html.erb
 <% provide(:title, "Home") %>
+<body>
+<h1>Home Page</h1>
+  <p>
+    This is my home page. Welcome.
+  </p>
+</body>
+```
+and in our application.html.erb page, we provide the general title:
+```html
 <!DOCTYPE html>
 <html>
   <head>
- <title><%= yield(:title) %> | Bloggster</title>  </head>
+    <title><%= yield(:title) %> | Bloggster</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
   <body>
-    <h1>Home Page</h1>
-    <p>
-      This is my home page. Welcome.
-    </p>
+    <%= yield %>
   </body>
 </html>
 ```

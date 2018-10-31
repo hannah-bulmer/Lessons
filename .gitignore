@@ -5,6 +5,7 @@
 .vscode/
 config
 venv/
+__pycache__
 
 # Jupyter specific files
 .ipynb_checkpoints

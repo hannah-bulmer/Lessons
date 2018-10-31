@@ -3,7 +3,7 @@ By the end of this lesson, you will understand how many popular machine learning
 
 ## Today's Schedule
 
-- Going through the slideshow which is found [HERE](https://docs.google.com/presentation/d/1Iuv0hIMAUldmGL4iZPCaTLa-Jzu2EGtE-4n9nl6IkMU-DELETE-THIS/edit?usp=sharing) (If you see this, the link isn't active yet, adding finishing touches)
+- Going through the slideshow which is found [HERE](https://docs.google.com/presentation/d/1Iuv0hIMAUldmGL4iZPCaTLa-Jzu2EGtE-4n9nl6IkMU/edit?usp=sharing)
 
 ## No Coding Today
 
