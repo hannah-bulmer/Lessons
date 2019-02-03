@@ -4,7 +4,7 @@ In this lesson we have two goals:
 1. Learn how to navigate your file structure using the command line (terminal, bash, command prompt, etc)
 2. Start taking a look at how a simple web API works
 
-To do these you will only a computer with access to a web browser.
+To do these you will only need a computer with access to a web browser.
 We will not be doing any complicated programming in this lesson.
 
 ### Making a quick account

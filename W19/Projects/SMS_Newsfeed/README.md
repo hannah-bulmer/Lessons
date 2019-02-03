@@ -17,8 +17,8 @@ Learn how to use Python to collect information from the web and text yourself a 
 | Lesson # | Week # | Date          | Description                                           |
 | -------- | ------ | ------------- | ------------------------------------------------------|
 | 1        | 4      | Jan 29        | Introduction to the command line and web technologies |
-| 2        | 5      | Feb 5         | Install Python and send your first text message using Twilio's API |
-| 3        | 6      | Feb 12        | Request the weather and send it as a text message!    |
+| 2        | 5      | Feb 5         | Install Python and use requests to get the weather |
+| 3        | 6      | Feb 12        | Use Twilio's API to send your first text with the weather  |
 | -        | 7      | Feb 19        | Reading Week Break: Special Meet-Up Activity!         |
 | 4        | 8      | Feb 26        | Set up a daily text message using PythonAnywhere's task schedule |
 | 5        | 9      | Mar 5         | Explore other useful APIs to make your newsfeed your own |
