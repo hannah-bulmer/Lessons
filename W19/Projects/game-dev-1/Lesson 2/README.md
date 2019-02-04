@@ -1,9 +1,8 @@
-# Lesson 1: Create our background and introduction to programming
+# Lesson 2: Create our background and introduction to programming
 
 ## Framing our scene
-*It's funny how the beauty of art has so much more to do with the frame than the artwork itself.
-
-- Chuck Palahniuk, Choke*
+*It's funny how the beauty of art has so much more to do with the frame than the artwork itself.*
+-Chuck Palahniuk, Choke
 
 Lets take some time to adjust the visuals of our game before we move on. In the Hierarchy, select the **Main Camera** GameObject. Once you select this GameObject you should notice a little preview window appear in the bottom right corner of the Scene View. This is a preview window for what this camera sees, and right now you should see it looking a little funny.
 
@@ -115,9 +114,9 @@ public class BGScroller : MonoBehaviour {
     }
 
     void Update () {
-		float newPosition = Mathf.Repeat(Time.time * scrollSpeed, tileSizeZ);
+	float newPosition = Mathf.Repeat(Time.time * scrollSpeed, tileSizeZ);
         transform.position = startPosition - Vector3.forward * newPosition;
-	}
+    }
 }
 ```
 
