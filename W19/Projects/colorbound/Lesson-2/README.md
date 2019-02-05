@@ -2,6 +2,8 @@
 
 **Objective**: Simplify asset loading, get an animated sprite on the screen and learn how to use tiled + display/collide with a tilemap
 
+Turn to the person on your left and talk about the best thing that happened to you over the weekend.
+
 Please sign up for the general slack at https://uwcoffeencode.slack.com if you haven't already. Make sure you
 join the game-dev-2-colorbound channel.
 
@@ -89,3 +91,22 @@ let image = loadImage("heart.png");
 
 And we can simply draw this image in our `draw` function because we can rest assured that
 the draw function will never be called when images are still being loaded.
+
+## 3. Animation
+There are many approaches to doing 2d animation in games. The approach we are going to use is referred to as spritesheet animation.
+All animated entities in our game will use an image in which all the frames of its animations are 
+laid out sequentially. In order to give the illusion of smooth animation, we cycle the region of the image we display
+pereodically.
+
+Look at the root directory of the project. There is a folder called `utils` which contains a file called `sprites.js`.
+This is a module I wrote that facilitates sprite animation, and it's what we're going to use for this lesson. I will expand on how this
+is implemented.
+
+Here's an example to demonstrate the basic usage of this module.
+
+```js
+
+```
+
+## 4. Tilemaps
+
