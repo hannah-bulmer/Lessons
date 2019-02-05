@@ -1,3 +1,5 @@
+const SEC_PER_FRAME = 1 / 60;
+
 let sprites = [];
 
 // info looks like:

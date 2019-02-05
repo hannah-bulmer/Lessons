@@ -5,8 +5,6 @@ const OBJECT_LAYER_NAME = "Objects";
 
 const OBJECT_TILESET_NAME = "objects";
 
-const PLAYER_OBJECT_TYPE = "player";
-
 let tileMap = null;
 
 function onTileMapLoaded(name, data) {
@@ -43,9 +41,10 @@ function onTileMapLoaded(name, data) {
             object.type = tile.type;
         }
 
-        if(object.type == PLAYER_OBJECT_TYPE) {
-            initPlayer(object.x, object.y - object.height);
+        /* TODO: Write object loading code here
+        if(object.type == "player") {
         }
+        */
     }
 }
 
