@@ -23,9 +23,13 @@ let player = {
                 frameTime: 0.08
             }
         }
-    })
+    }),
+
+    dx: 0,
+    dy: 0
 };
 
+player.sprite.x = 100;
 player.sprite.y = 200;
 
 playAnim(player.sprite, "run");
@@ -51,19 +55,42 @@ window.addEventListener("keyup", function(e) {
 });
 
 function processInput() {
+    player.grounded = collideTileMap(player.sprite.x, player.sprite.y + 1, 128, 128);
+
     if(input.left) {
-        player.sprite.x -= 4;
+        player.dx = -4;
         player.sprite.flip = true;
-    } 
-    
-    if(input.right) {
-        player.sprite.x += 4;
+    } else if(input.right) {
+        player.dx = 4;
         player.sprite.flip = false;
     } else {
+        player.dx = 0;
+    } 
+
+    if(input.jump && player.grounded) {
+        player.dy = -10;
     }
 }
 
 function update() {
+    player.dy += 0.5;
+
+    if(player.dy > 20) {
+        player.dy = 5;
+    }
+
+    if(!collideTileMap(player.sprite.x + player.dx, player.sprite.y, 128, 128)) {
+        player.sprite.x += player.dx;
+    } else {
+        player.dx = 0;
+    }
+    
+    if(!collideTileMap(player.sprite.x, player.sprite.y + player.dy, 128, 128)) {
+        player.sprite.y += player.dy;
+    } else {
+        player.dy = 0;
+    }
+
     updateSprites();
 }
 
