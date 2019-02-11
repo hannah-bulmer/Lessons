@@ -1,4 +1,4 @@
-# Meet-Up #2 Agenda:
+# Meet-Up #3 Agenda:
 
 **Objective**: Refactor code into separate files, and introduce enemies.
 
