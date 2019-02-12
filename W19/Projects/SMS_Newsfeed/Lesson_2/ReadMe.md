@@ -37,7 +37,7 @@ Click link, say yes, make some tea, boom you're done.
 
 2. Run the executable you just downloaded, and make sure you understand all the options you're agreeing to.
 Again not difficult.
-You'll be asked where you want to put Python, probably whether to make shortcuts or not, and some other things.
+You'll be asked *where* (you'll need this for later) you want to put Python, probably whether to make shortcuts or not, and some other things.
 I recommend trying to keep everything as default as possible, since that will give you the best chance of finding other people online with the same kind of installation as you.
 The only non-standard thing that Python will ask you is if you want to change the Windows character limit. 
 This has to do with an old-school DOS limit on the length of file names.
@@ -66,7 +66,8 @@ I've found that on Windows 10 you can just search for `Environment Variable` and
 On the bottom right you'll see the `Environment Variables` option; click it.
 Now select the PATH and click edit.
 We'll want to add the path to where Python is located.
-If you didn't change any of the default settings then it will be under `C:\Python37`, but *confirm this* by going to that directory.
+This is the part where you pull out the path from Step 2 that you were supposed to remember.
+If you didn't change any of the default settings then it will be under `C:\Python37` or `C:\Users\<username>\AppData\Local\Programs\Python\Python37-*`, but *confirm this* by checking those directories.
 Now just approve all changes and close these windows.
 You'll probably need to restart powershell before the changes take effect.
 
