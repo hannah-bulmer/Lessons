@@ -86,7 +86,7 @@ With the Quad selected, scroll down in the inspector until you find the **Materi
   <img src="https://i.imgur.com/8votpwk.jpg" width="650"/>
 </p>
 
-However, you will notice our texture looks quite squished and uncomfortable on this Quad, and thats because it is scaled to be very small. Adjust the *x* and *z* Scale value to be **15** and **30** respectively. We will also need to duplicate this background to cover the wide aspect ratio of our game, so with the Quad selected in the Hierarchy, press **Ctrl + D** on windows or **Command + D** on Mac (If you are on Linux how are you even here??). This will duplicate the Quad which should appear as a child of the Background GameObject. Do this again and place one of the Quads at an *x* position of **15** and the other at **-15**. Now our background should be covered.
+However, you will notice our texture looks quite squished and uncomfortable on this Quad, and thats because it is scaled to be very small. Adjust the *x* and *y* Scale value to be **15** and **30** respectively. We will also need to duplicate this background to cover the wide aspect ratio of our game, so with the Quad selected in the Hierarchy, press **Ctrl + D** on windows or **Command + D** on Mac (If you are on Linux how are you even here??). This will duplicate the Quad which should appear as a child of the Background GameObject. Do this again and place one of the Quads at an *x* position of **15** and the other at **-15**. Now our background should be covered.
 
 Now duplicate the **entire Background** object in a similar manner, and make it a child of the original Background Object. After the duplicate has been parented to the original, set it's *z* position to be **30**.
 
