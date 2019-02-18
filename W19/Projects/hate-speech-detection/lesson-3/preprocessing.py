@@ -20,4 +20,4 @@ positive = df.loc[df['sentiment'] == 4, ['sentiment', 'text']].head(1000)
 
 # Create our final dataset and pickle it for later
 df = pd.concat([negative, positive])
-data.to_pickle("sentiment_data.pkl")
+df.to_pickle("sentiment_data.pkl")
