@@ -3,7 +3,7 @@ import pandas as pd
 # Read CSV file into Pandas Dataframe
 # Rename columns of dataframe
 df = pd.read_csv("filename.csv", encoding="utf-8")
-data.columns = [
+df.columns = [
   'sentiment', 
   'user_id', 
   'time', 
