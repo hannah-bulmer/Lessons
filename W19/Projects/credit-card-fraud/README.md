@@ -19,8 +19,8 @@ Python 3.6 as the language to power our project
 |Lesson #	|Date	 |Description
 |   --      | --     | --
 |1	        |Jan 30  |Intro to Machine Learning, build your first ML model
-|2	        |Feb 6	 |Installing Jupyter Notebook, python 3.6 with Anaconda
-|~	        |Feb 13  |Snow Day
+|~	        |Feb 6	 |Snow Day
+|2	        |Feb 13  |Installing Jupyter Notebook, python 3.6 with Anaconda
 |~          |Feb 20  |Reading Week Break: Special Meet-Up Activity
 |3	        |Feb 27	 |Logistics Regression
 |4	        |Mar 6	 |Isolation Forest
