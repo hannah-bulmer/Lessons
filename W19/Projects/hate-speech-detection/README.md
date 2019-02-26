@@ -13,13 +13,25 @@ The best part of all? **No pre-requisite knowledge is required!** All skill leve
 
 - Have fun and meet new people in relaxed yet still educational environment
 
+<<<<<<< HEAD
 ## Syllabus (Needs Update)
+=======
+## Syllabus
+>>>>>>> 6fe9c0a4c37aa0407e75cf808644a7dc74849588
 
 Lesson # | Date | Description
 --|--|--
 1 | Jan 30 | Intro to ML, NLP, and AI
+<<<<<<< HEAD
 2 | Feb 13 | The End to End Process of ML
 3 | Feb 27 | Building a Sentiment Analysis Engine
 4 | Mar 06 | Playing Around with Different ML Algorithms
 5 | Mar 13 | Target Identification and Threat Detection with NLP
 6 | Mar 20 | Wrapping it all up
+=======
+2 | Feb 6 | Sentiment Analysis with Naive Bayes
+3 | Feb 13 | TF-IDF, looking at n-grams, and ML Algorithms
+4 | Feb 27 | Target Identification using NLP methods
+5 | Mar 6| Threat Detection and Word2Vec
+6 | Mar 13| Finishing Touches!
+>>>>>>> 6fe9c0a4c37aa0407e75cf808644a7dc74849588

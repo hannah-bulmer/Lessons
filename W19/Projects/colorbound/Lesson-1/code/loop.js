@@ -43,9 +43,13 @@ window.addEventListener("keyup", function(e) {
 function processInput() {
     if(input.left) {
         player.x -= 4;
+<<<<<<< HEAD
     } 
     
     if(input.right) {
+=======
+    } else if(input.right) {
+>>>>>>> 6fe9c0a4c37aa0407e75cf808644a7dc74849588
         player.x += 4;
     } else {
     }
@@ -80,4 +84,7 @@ function loop() {
 loop();
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6fe9c0a4c37aa0407e75cf808644a7dc74849588
