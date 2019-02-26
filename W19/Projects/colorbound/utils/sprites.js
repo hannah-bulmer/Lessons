@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 const SEC_PER_FRAME = 1 / 60;
 
-=======
->>>>>>> 6fe9c0a4c37aa0407e75cf808644a7dc74849588
 let sprites = [];
 
 // info looks like:
