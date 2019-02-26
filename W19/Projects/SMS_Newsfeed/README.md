@@ -18,9 +18,10 @@ Learn how to use Python to collect information from the web and text yourself a 
 | -------- | ------ | ------------- | ------------------------------------------------------|
 | 1        | 4      | Jan 29        | Introduction to the command line and web technologies |
 | 2        | 5      | Feb 5         | Install Python and use requests to get the weather |
-| 3        | 6      | Feb 12        | Use Twilio's API to send your first text with the weather  |
+| -        | 6      | Feb 12        | [Cancelled due to weather]  |
 | -        | 7      | Feb 19        | Reading Week Break: Special Meet-Up Activity!         |
-| 4        | 8      | Feb 26        | Set up a daily text message using PythonAnywhere's task schedule |
-| 5        | 9      | Mar 5         | Explore other useful APIs to make your newsfeed your own |
-| 6        | 10     | Mar 12        | Polish any remaining kinks in your projects, add more feeds |
-| -        | 11     | Mar 19        |End of Term event!!!! |
+| 3        | 8      | Feb 26        | Use Twilio's API to send your first text with the weather  |
+| 4        | 9      | Mar 5         | Set up a daily text message using PythonAnywhere's task schedule |
+| 5        | 10     | Mar 12        | Explore other useful APIs to make your newsfeed your own |
+| 6        | 11     | Mar 19        | Polish any remaining kinks in your projects, add more feeds |
+| -        | 12     | Mar 26        |End of Term event!!!! |
