@@ -43,9 +43,7 @@ window.addEventListener("keyup", function(e) {
 function processInput() {
     if(input.left) {
         player.x -= 4;
-    } 
-    
-    if(input.right) {
+    } else if(input.right) {
         player.x += 4;
     } else {
     }
@@ -78,6 +76,3 @@ function loop() {
 }
 
 loop();
-
-
-

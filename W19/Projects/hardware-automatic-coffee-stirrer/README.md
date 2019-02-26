@@ -26,6 +26,7 @@ Build, from scratch, an automatic coffee stirrer powered by your very own Arduin
 | 6        | 10     | Mar 13 | Testing circuit and design with the stirrer. |
 | -        | 11     | Mar 20 |End of Term event!!!! |
 
+
 ## Summary of material covered so far
 Use this section as a resource if you are behind and are looking to catch up!
 

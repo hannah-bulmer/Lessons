@@ -13,7 +13,8 @@ The best part of all? **No pre-requisite knowledge is required!** All skill leve
 
 - Have fun and meet new people in relaxed yet still educational environment
 
-## Syllabus (Needs Update)
+
+## Syllabus
 
 Lesson # | Date | Description
 --|--|--

@@ -21,6 +21,8 @@ You will learn how to use the Unity engine, do a bit of programming, learn how t
 
 - [Visual Studio](https://visualstudio.microsoft.com/)
 
+- [Monodevelop](https://www.monodevelop.com/) or an IDE of your choice
+
 - [C#](https://docs.microsoft.com/en-us/dotnet/csharp/)
 
 - [Unity Scripting Reference](https://docs.unity3d.com/ScriptReference/)
