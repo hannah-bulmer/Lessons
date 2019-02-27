@@ -24,21 +24,21 @@ class SentimentAnalysis:
         """
         # Splits the dataset into an 80/20 train-test ratio
         x_train, x_test, y_train, y_test = train_test_split(
-        self.corpus, 
-        self.tags, 
-        test_size=0.2, 
-        stratify=self.tags
+            self.corpus, 
+            self.tags, 
+            test_size=0.2, 
+            stratify=self.tags
         )
 
         # Chooses our given feature selection method
         if method == "bag_of_words":
-        self.vectorizer = CountVectorizer()
+            self.vectorizer = CountVectorizer()
         elif method == "bigrams":
-        self.vectorizer = CountVectorizer(ngram_range=(2, 2))
+            self.vectorizer = CountVectorizer(ngram_range=(2, 2))
         elif method == "tf_idf":
-        self.vectorizer = TfidfVectorizer()
+            self.vectorizer = TfidfVectorizer()
         else:
-        print("Invalid method given to .train()")
+            print("Invalid method given to .train()")
 
         # Vectorizes text into word vectors
         self.vectorizer.fit(x_train)
