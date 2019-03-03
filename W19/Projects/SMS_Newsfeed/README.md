@@ -45,7 +45,7 @@ If you don't have preferred code editor, I can recommend something like [Atom](h
   - [Twilio](https://www.twilio.com). Their service is paid, but you'll get $15 of free credit to try them out. You'll need a cellphone number to validate with them to make sure the service works. You should buy a trial number from them, any number from Ontatio should be fine, since it will all count as local anyways.
   - [PythonAnywhere](https://www.pythonanywhere.com). These are the guys we're going to use to host our code online and schedule to run once a day. Their free tier is all we need.
 
-4) You can then look at the code examples in [Lesson 3](Lesson_3) and [Lesson 4](Lesson_4).
+4) You can then look at the code examples in [Lesson 3](Lesson_3/request_weather.py) and [Lesson 4](Lesson_4/weather_sms.py).
 The one in Lesson 3 will fetch a Python dictionary with the weather once you give it a valid OpenWeatherMap API key. The one in Lesson 4 will actually send a text message to a number verfied with your Twilio account.
 
 From here you can just pick up from [Lesson 4](Lesson_4).
