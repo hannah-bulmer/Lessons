@@ -30,9 +30,9 @@ You will learn how to use the Unity engine, do a bit of programming, learn how t
 ## Syllabus
 Lesson # | Date | Description
 --|--|--
-1 | Jan 30 | Getting to know Unity, building our player
-2 | Feb 6 | Create our background and introduction to programming
-3 | Feb 13 | Player shooting and creating the game boundary
-4 | Feb 27 | Creating hazards and the game controller
-5 | Mar 6| Adding game audio and enemies
-6 | Mar 13| UI work, displaying score and building the game
+1 | Jan 29 | Getting to know Unity, building our player
+2 | Feb 5 | Create our background and introduction to programming
+3 | Feb 26 | Player shooting and creating the game boundary
+4 | Mar 5 | Creating hazards and the game controller
+5 | Mar 12| Adding game audio and enemies
+6 | Mar 19| UI work, displaying score and building the game
