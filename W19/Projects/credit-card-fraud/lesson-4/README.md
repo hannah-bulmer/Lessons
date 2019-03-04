@@ -1,4 +1,4 @@
-# Dealing with unbalanced Data
+# Model evaluation and unbalanced Data
 
 
 ## Today's Schedule
