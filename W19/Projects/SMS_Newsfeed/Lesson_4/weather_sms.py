@@ -1,4 +1,5 @@
 import requests
+from twilio.rest import Client
 
 def get_weather_dictionary(api_key, city_id='6176823'):
     """Request the weather from OpenWeatherMap
@@ -89,7 +90,7 @@ if __name__ == '__main__':
     TWILIO_KEY = 'Your Twilio key here'
     OPENWEATHER_KEY = 'Your OpenWeatherMap key here'
 
-    resp = get_weather(OPENWEATHER_KEY)
+    resp = get_weather_dictionary(OPENWEATHER_KEY)
     city, temp, wind_spd, desc = extract_info_from_json(resp)
     msg_body = "City: {}\nTemp: {} C\nWind Speed: {} m/s\nDesc: {}".format(city,temp,wind_spd,desc)
 
