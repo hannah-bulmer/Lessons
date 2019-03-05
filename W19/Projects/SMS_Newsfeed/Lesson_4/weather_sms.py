@@ -84,7 +84,7 @@ def send_sms(to_phone_number, msg_body, TWILIO_SID, TWILIO_KEY, from_phone_numbe
     client = Client(TWILIO_SID, TWILIO_KEY)
     client.messages.create(body=msg_body, from_=from_phone_number, to=to_phone_number)
 
-if __name__ == '__main__'
+if __name__ == '__main__':
     TWILIO_SID = 'Your Twilio SID here'
     TWILIO_KEY = 'Your Twilio key here'
     OPENWEATHER_KEY = 'Your OpenWeatherMap key here'
@@ -93,4 +93,7 @@ if __name__ == '__main__'
     city, temp, wind_spd, desc = extract_info_from_json(resp)
     msg_body = "City: {}\nTemp: {} C\nWind Speed: {} m/s\nDesc: {}".format(city,temp,wind_spd,desc)
 
-    send_sms(to_phone_number, msg_body, TWILIO_SID, TWILIO_KEY)
+    to_phone_number = '+15555555555'
+    from_phone_number = '+15555555555'
+
+    send_sms(to_phone_number, msg_body, TWILIO_SID, TWILIO_KEY, from_phone_number)
