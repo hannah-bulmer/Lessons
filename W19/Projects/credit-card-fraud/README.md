@@ -23,7 +23,7 @@ Python 3.6 as the language to power our project
 |2	        |Feb 13  |Installing Jupyter Notebook, python 3.6 with Anaconda
 |~          |Feb 20  |Reading Week Break: Special Meet-Up Activity
 |3	        |Feb 27	 |Logistics Regression
-|4	        |Mar 6	 |Isolation Forest
+|4	        |Mar 6	 |Dealing with unbalanced Data
 |5	        |Mar 13	 |More ML models, and compare them
 |6          |Mar 20  |Finishing touches, debugging, and Q&A 
 |~	        |Mar 27	 |End of Term event.
