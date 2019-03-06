@@ -36,3 +36,23 @@ Lesson # | Date | Description
 4 | Mar 5 | Creating hazards and the game controller
 5 | Mar 12| Adding game audio and enemies
 6 | Mar 19| UI work, displaying score and building the game
+
+## Summary of Lessons so far
+
+Up until Lesson 4 we have covered a variety of topics, most of which were related to building individual game systems and objects.
+
+We started with building our game space which involved:
+- Importing our art assets and creating our background
+- Building the player GameObject
+- Lighting our scene
+
+Then we went on to create a variety of scripts for our player, lazer bolts, and scrolling our background. We used a variety of Unity engine features and classes such as:
+- Screen to World Space transformation
+- The Rigidbody component
+- Collider programming and logic
+- Managing, and creating good Prefabs
+
+We then ended off by bringing all of our features together and controlling the overall logic for our entire game in the Game Controller.
+
+The entire project file complete up until Lesson 4 can be found [here](https://drive.google.com/file/d/1jmkjWXrppA_GnhQdL6urmyotP4rc8mrT/view?usp=sharing).
+Download this .zip file, extract it to the place of your choice, and open it as an existing project when selecting a project after starting Unity.
