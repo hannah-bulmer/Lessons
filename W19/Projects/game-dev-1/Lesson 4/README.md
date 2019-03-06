@@ -118,7 +118,7 @@ As they say, three is a crowd but this crowd is going to be *out of this world*!
 
 Now that we have a basic hazard asteroid setup, we can re-use the work we did to create some new looking asteroids.
 
-Drag the *Ateroid* prefab from the *Assets/Prefabs/Asteroids* folder into the Hierarchy two times, to create two GameObjects. Right click each GameObject and select **Unpack Prefab**, this will allow us to modify this GameObject without modifying the prefab.
+Drag the *Ateroid* prefab from the *Assets/Prefabs/Asteroids* folder into the Hierarchy two times, to create two GameObjects. Right click each GameObject and select **Unpack Prefab**, this will allow us to modify this GameObject without modifying the prefab. (This may not be necessary depending on what version of Unity you have! If you don't see this option, when you right click a prefab, feel free to just modify it without).
 
 <p align="center">
   <img src="https://i.imgur.com/547uXcS.jpg" width="650"/>
