@@ -75,4 +75,3 @@ You can download the latest code from `Lesson-4/code.zip`. Opening `index.html` 
     - Debug visulization:
         * At this point we were messing around with collision rectangles a lot so we wrote a function which drew these to the screen so we could see them better
         * Used graphics context 'fillRect' function
->>>>>>> 9c058df... Summary
