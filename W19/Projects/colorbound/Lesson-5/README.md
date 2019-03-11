@@ -237,4 +237,124 @@ function playerProcessInput() {
 }
 ```
 
-Now if you run the game, we should be able to fire lasers using `j, k, l` and see them grow and them disappear immediately.
+Now if you run the game, we should be able to fire lasers using `j, k, l`, see them grow and then disappear immediately.
+
+### Finishing Laser Implementation
+Ok, so we can fire lasers. However, they currently travel through the walls, don't fade out nicely, and don't interact with enemies.
+Let's start by checking if they hit the tilemap.
+
+```js
+// lasers.js
+
+const LASER_COLLISION_SAMPLE_COUNT = 5;
+const LASER_FADE_TIME = 1.0;
+
+// A helper to check if two rectangles are colliding (intersecting)
+function collideRects(ax, ay, aw, ah, bx, by, bw, bh) {
+
+    // Check if there isn't an overlap on any of the 4 axes. If so,
+    // then we know there's no collision
+    if(ax + aw < bx || bx + bw < ax) return false;
+    if(ay + ah < by || by + bh < ay) return false;
+    
+    // Overlapping on all axes; collision
+
+    return true;
+}
+
+// Creating a helper to check for collision against enemies.
+// Instead of returning true or false like the other collision helpers
+// this returns the enemy that was hit or null.
+function collideEnemy(x, y, w, h) {
+    for(let i = 0; i < enemies.length; ++i) {
+        let enemy = enemies[i];
+
+        // TODO(You): Make sure you create an ENEMY_RECT constant in enemies.js (just like we did for rockets)
+
+        if(collideRects(x, y, w, h, enemy.x + ENEMY_RECT.x, enemy.y + ENEMY_RECT.y, ENEMY_RECT.w, ENEMY_RECT.h)) {
+            return enemy;
+        }
+    }
+
+    return null;
+}
+
+function updateLasers() { 
+    for(let i = 0; i < lasers.length; ++i) {
+        let laser = lasers[i];
+
+        // New code
+
+        if(laser.fadeTimer > 0) {
+            laser.fadeTimer -= SEC_PER_FRAME;
+            if(laser.fadeTimer <= 0) {
+                removeLaser(laser);
+            }
+
+            // Don't bother with any of the code below
+            continue;
+        }
+
+        // We'll have to break up the growth of the laser into steps so we can check whether
+        // it's hitting a wall/enemy with greater resolution. This is because the laser could grow very
+        // quickly and thus pass through without failing our check.
+
+        // Also, rather than immediately removing the laser, we will set it's fadeTimer so that it fades
+        // away.
+
+        const h = LASER_IMAGES[laser.color].height;
+
+        const growthStep = LASER_GROWTH_RATE / LASER_COLLISION_SAMPLE_COUNT;
+
+        for(let j = 0; j < LASER_COLLISION_SAMPLE_COUNT; ++j) { 
+            // Once again, we have to split up the code based on the direction of the laser since
+            // we don't want to pass in negative w/h to collideTileMap
+
+            if(laser.dir > 0) {
+                if(collideTileMap(laser.x, laser.y, laser.length, h)) {
+                    laser.fadeTimer = LASER_FADE_TIME; 
+                    
+                    // Don't grow the laser any more
+                    break;
+                }
+
+                let e = collideEnemy(laser.x, laser.y, laser.length, h);
+
+                // If we hit an enemy
+                if(e != null) {
+                    // TODO(Us): Create explosion
+                    removeEnemy(e);
+                    laser.fadeTimer = LASER_FADE_TIME;
+                
+                    break;
+                }
+            } else {
+                if(collideTileMap(laser.x - laser.length, laser.y, laser.length, h)) {
+                    laser.fadeTimer = LASER_FADE_TIME;
+                    break;
+                }
+
+                let e = collideEnemy(laser.x - laser.length, laser.y, laser.length, h);
+
+                // If we hit an enemy
+                if(e != null) {
+                    // TODO(Us): Create explosion
+                    removeEnemy(e);
+                    laser.fadeTimer = LASER_FADE_TIME;
+                    
+                    break;
+                }
+            }
+
+            laser.length += growthStep;
+
+            if(laser.length >= LASER_MAX_LENGTH) {
+                laser.fadeTimer += LASER_FADE_TIME;
+            }
+        }    
+    }
+}
+```
+
+A fairly large amount of code, yes, but if you follow it line by line and read through the comments, hopefully it shouldn't be too hard to follow (feel free to ask any questions on Slack). No new concepts are introduced.
+
