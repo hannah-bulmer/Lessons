@@ -153,8 +153,6 @@ public class PlayerController : MonoBehaviour {
         if (Input.GetButton("Fire1") && Time.time > nextValidFireTime) {
             nextValidFireTime = Time.time + fireRate;
             Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
-
-            GetComponent<AudioSource>().Play();
         }
     }
 
@@ -193,7 +191,7 @@ Right click on the Hierarchy and find the **3D Object** menu, and select **Cube*
   <img src="https://i.imgur.com/EuiQq1R.jpg" width="650"/>
 </p>
 
-This will spawn us a cube with all the components we need, and some renderers for us to see it with. However, because this boundary will be invisible, we can **remove the Mesh Filter and Mesh Renderer components**. Now all that should be left is a Transform, and a Box Collider component.
+This will spawn us a cube with all the components we need, and some renderers for us to see it with. However, because this boundary will be invisible, we can **remove the Mesh Filter and Mesh Renderer components**. Now all that should be left is a Transform, and a Box Collider component. Make sure to check the flag for **Is Trigger** on the box collider component.
 
 We are going to control the bounds of the boundary to meet the edges of our play window with scripting, similar to how we determined when a player was at the edge of our screen.
 
