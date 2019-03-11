@@ -2,7 +2,7 @@
 
 **Objective**: Allow the player to shoot enemies, have them fire rockets at the player (Exercise from previous lesson)
 
-## Shooting Enemies
+## 1. Shooting Enemies
 
 ### Design
 In the original game, the player's weapon is essentially a laser gun which shoots beams of 3 different colors. These can be shot to the left or right depending on which direction the player is facing.
@@ -358,3 +358,51 @@ function updateLasers() {
 
 A fairly large amount of code, yes, but if you follow it line by line and read through the comments, hopefully it shouldn't be too hard to follow (feel free to ask any questions on Slack). No new concepts are introduced.
 
+### Faded
+Let's update the draw function to display the fade effect properly:
+
+```js
+// lasers.js
+
+function drawLasers(camera) { 
+    for(let i = 0; i < lasers.length; ++i) {
+        let laser = lasers[i];
+
+        // On order to make things transparent when drawing with HTML5 canvas,
+        // we can set ctx.globalAlpha to some value (1 = oqaque, 0 = completely
+        // transparent and anything in between)
+        
+        
+        // We keep track of the previous globalAlpha so that after we change
+        // it, we can restore it so other drawing code isn't affected.
+        const prevAlpha = ctx.globalAlpha;
+
+        if(laser.fadeTimer > 0) {
+            // We transform the fadeTimer value to a value between 0 and 1 as required.
+            // Basically, when the fadeTimer is LASER_FADE_TIME (i.e. it just started fading)
+            // then this will produce 1, and as the timer goes to 0, this will as well.
+
+            ctx.globalAlpha = laser.fadeTimer / LASER_FADE_TIME;
+        }
+
+        // Same code as before
+        const image = LASER_IMAGES[laser.color];
+
+        if(laser.dir < 0) {
+            ctx.drawImage(image, 
+                    laser.x - laser.length - camera.x,
+                    laser.y - camera.y, laser.length, image.height);
+        } else {
+            ctx.drawImage(image, laser.x - camera.x, laser.y - camera.y, laser.length, image.height);
+        }
+
+        // Restore the alpha
+        ctx.globalAlpha = prevAlpha;
+    }
+}
+```
+
+If you run the game now, the lasers should fade out before being removed :)
+
+## 2. Enemies Shooting Rockets At The Player
+This is an exercise for you to do in-class. Lesson 4 has a section near the end which covers this, but I will help you along as well.
