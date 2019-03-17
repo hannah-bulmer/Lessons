@@ -24,6 +24,6 @@ Python 3.6 as the language to power our project
 |~          |Feb 20  |Reading Week Break: Special Meet-Up Activity
 |3	        |Feb 27	 |Logistics Regression
 |4	        |Mar 6	 |Dealing with unbalanced Data
-|5	        |Mar 13	 |Anomaly Detection
+|5	        |Mar 13	 |Lesson Cancelled 
 |6          |Mar 20  |Finishing touches, debugging, and Q&A 
 |~	        |Mar 27	 |End of Term event.
