@@ -1,4 +1,4 @@
-# Lesson 5: Adding UI, the End Game, and Exporting.
+# Lesson 6: Adding UI, the End Game, and Exporting.
 
 ## Using UI for Score
 U and I were meant to be, like a user...and their interface? I think I have to work on that one.
