@@ -17,7 +17,10 @@ let player = {
     }),
 
     dx: 0,
-    dy: 0
+    dy: 0,
+
+    hp: 5,
+    maxHp: 5
 };
 
 player.sprite.x = 100;
@@ -45,6 +48,8 @@ function playerProcessInput() {
 
     if(input.jump && player.grounded) {
         player.dy = -PLAYER_JUMP_ACCEL;
+
+        createRocket(player.sprite.x, player.sprite.y, Math.random() * Math.PI * 2);
     }
 }
 
@@ -67,3 +72,21 @@ function updatePlayer() {
         player.dy = 0;
     }
 }
+
+const HEART_IMAGE = loadImage("assets/heart.png");
+const EMPTY_HEART_IMAGE = loadImage("assets/empty_heart.png");
+
+function drawPlayerHp() {
+    for(let i = 1; i <= player.maxHp; ++i) {
+        if(i > player.hp) {
+            ctx.drawImage(EMPTY_HEART_IMAGE, i * EMPTY_HEART_IMAGE.width - 50, 0);
+        } else {
+            ctx.drawImage(HEART_IMAGE, i * HEART_IMAGE.width - 50, 0);
+        }
+    }
+}
+
+
+
+
+

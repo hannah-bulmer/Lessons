@@ -15,6 +15,7 @@ function update() {
     updatePlayer();
     updateEnemies();
     updateRockets();
+    updateLasers();
     updateSprites();
 }
 
@@ -31,6 +32,7 @@ function draw() {
     };
 
     drawTilemap(camera);
+    drawLasers(camera);
     drawSprites(camera);
     drawRockets(camera);
 

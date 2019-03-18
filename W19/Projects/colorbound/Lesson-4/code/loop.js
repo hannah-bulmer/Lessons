@@ -2,7 +2,7 @@ let canvas = document.getElementById("view");
 let ctx = canvas.getContext("2d");
 
 function init() {
-    for(let i = 0; i < 20; ++i) {
+    for(let i = 0; i < 2; ++i) {
         createEnemy(100 + i * 5, 100);
     }
 }
@@ -14,19 +14,32 @@ function processInput() {
 function update() {
     updatePlayer();
     updateEnemies();
+    updateRockets();
     updateSprites();
 }
+
+const PLAYER_CENTER_OFF_X = 64;
+const PLAYER_CENTER_OFF_Y = 64;
+
 
 function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
  
     let camera = {
-        x: 0,
-        y: 100
+        x: Math.floor(player.sprite.x + PLAYER_CENTER_OFF_X - canvas.width / 2),
+        y: Math.floor(player.sprite.y + PLAYER_CENTER_OFF_Y - canvas.height / 2)
     };
 
     drawTilemap(camera);
     drawSprites(camera);
+    drawRockets(camera);
+
+
+    // TODO(Apaar): Get rid of this before shipping
+    debugDraw(camera);
+
+
+    drawPlayerHp();
 }
 
 function loop() {

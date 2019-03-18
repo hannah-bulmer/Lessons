@@ -42,7 +42,7 @@ function removeEnemy(enemy) {
 }
 
 const ENEMY_MOVE_ACCEL = 0.3;
-const ENEMY_CHASE_RADIUS = 200;
+const ENEMY_CHASE_RADIUS = 300;
 const ENEMY_DRAG_FACTOR = 0.94;
 const ENEMY_RADIUS = 64;
 const ENEMY_REPLUSION_ACCEL = 5;
