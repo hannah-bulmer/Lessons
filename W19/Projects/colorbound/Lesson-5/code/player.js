@@ -20,7 +20,9 @@ let player = {
     dy: 0,
 
     hp: 5,
-    maxHp: 5
+    maxHp: 5,
+
+    laserCooldownTimer: 0
 };
 
 player.sprite.x = 100;
@@ -32,6 +34,38 @@ const PLAYER_MOVE_SPEED = 6;
 const PLAYER_JUMP_ACCEL = 13;
 const PLAYER_TERMINAL_VEL = 20;
 const PLAYER_GRAVITY = 0.5;
+const PLAYER_LASER_COOLDOWN = 0.2;
+
+function playerCreateLaser(color) {
+    if(player.laserCooldownTimer > 0) {
+        return;
+    }
+
+    const dir = player.sprite.flip ? -1 : 1;
+
+    /*
+    if(player.sprite.flip) {
+        dir = -1;
+    } else {
+        dir = 1;
+    }
+    */
+
+    let x = 0;
+    let y = 0;
+
+    if(dir > 0) {
+        x = player.sprite.x + 100;
+        y = player.sprite.y + 50;
+    } else {
+        x = player.sprite.x + 10;
+        y = player.sprite.y + 50;
+    }
+
+    createLaser(x, y, dir, color);
+
+    player.laserCooldownTimer += PLAYER_LASER_COOLDOWN;
+}
 
 function playerProcessInput() {
     player.grounded = collideTileMap(player.sprite.x, player.sprite.y + 1, 128, 128);
@@ -51,9 +85,21 @@ function playerProcessInput() {
 
         createRocket(player.sprite.x, player.sprite.y, Math.random() * Math.PI * 2);
     }
+
+    if(input.shootRed) {
+        playerCreateLaser("red");
+    } else if(input.shootBlue) {
+        playerCreateLaser("blue");
+    } else if(input.shootYellow) {
+        playerCreateLaser("yellow");
+    }
 }
 
 function updatePlayer() {
+    if(player.laserCooldownTimer > 0) {
+        player.laserCooldownTimer -= SEC_PER_FRAME;
+    }
+
     player.dy += PLAYER_GRAVITY;
 
     if(player.dy > PLAYER_TERMINAL_VEL) {
