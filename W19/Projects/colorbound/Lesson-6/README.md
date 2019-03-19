@@ -90,3 +90,53 @@ Now, if you select the "Stamp Brush" tool in the toolbar or press B, you can pla
 Place down walls to line the entirety of the new level. Use the "Eraser" tool to erase some of the old walls. Similarly, for the background layer, select a larger portion of the tileset and use the brush to paint making sure you have the "Background" layer selected.
 
 There's more to it, but those are all the basics.
+
+## Explosions
+Explosions are actually very simple to do in our engine. Recall the structure of the `info` object passed in to `createSprite`:
+
+```js
+// info looks like:
+//  {
+//      image: image,
+//      frameWidth: frameWidth,
+//      frameHeight: frameHeight,
+//      anims: {
+//          name: {
+//              startFrame: startFrame,
+//              length: length,
+//              frameTime: frameTime
+//          }
+//      }
+//      
+//      (optional) onLoop: function(sprite)
+//  }
+```
+
+Note that there is an optional property `onLoop` which is a function that's called every time an animation loops. We can just play the explosion animation and then remove the sprite as soon as it loops. This is basically all that's needed to simulate an explosion. We don't even need to write any particular logic or timing code since the sprite codee handles it for us.
+
+```js
+// explosions.js
+
+function createExplosion(x, y) {
+    let explosion = createSprite({
+        image: loadImage("assets/explosion.png"),
+        frameWidth: 128,
+        frameHeight: 128,
+        anims: {
+            explode: {
+                // TODO(You): I made these numbers up, figure them out yourself
+                startFrame: 0,
+                length: 7,
+                frameTime: 0.1
+            }
+        }
+
+        onLoop: function(sprite) {
+            removeSprite(sprite);
+        }
+    });
+}
+```
+
+## Killing Enemies with Lasers
+This is left as an exercise. It was covered in lesson 5 so see the documentation there.
